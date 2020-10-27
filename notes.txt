@@ -1,0 +1,32 @@
+//Event Listener for button
+        //HTTP Status:
+                    //200: OK
+                    //403: Forbidden
+                    //404: Not found
+                    
+open( ‘GET’, ‘comicselect.CGI?parameters’,1)
+comicselect.CGI clips an image, places it in a directory with a randomly generated name, returns the path to it
+displayComic() to create an element with the path returned by comicselect.CGI
+comicselect.txt, contains the path to a fixed image
+
+
+Get a server running on windows!!
+1.  AJAX request for a file whose content (response text) is a link to an image
+Javascript opens reader.html to display that image
+2.  AJAX request now goes to a CGI script (php) on the server side that (a) copies an image with a new name, and (b) prints out (responseText) the path to the new image
+3.  CGI script clips an image based on user input
+
+Next:
+JS how to select actual region.
+give user ability to select region
+button to enable selection
+retrieve coordinates. 
+click button -> move mouse to certain region (upper left to bottom right)
+modify display: instead of display image create canvas with url of pic
+Might need 3rd party tools in the end
+
+Due:
+1) Just display two coordinates with file name
+2) backend php that will perform cropping with watermarking
+3) Maybe another window pops up with url link and cropping (allow people with permission to use url)
+
