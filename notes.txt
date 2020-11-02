@@ -16,17 +16,17 @@ Javascript opens reader.html to display that image
 2.  AJAX request now goes to a CGI script (php) on the server side that (a) copies an image with a new name, and (b) prints out (responseText) the path to the new image
 3.  CGI script clips an image based on user input
 
-Next:
-JS how to select actual region.
-give user ability to select region
-button to enable selection
-retrieve coordinates. 
 click button -> move mouse to certain region (upper left to bottom right)
-modify display: instead of display image create canvas with url of pic
-Might need 3rd party tools in the end
 
-Due:
-1) Just display two coordinates with file name
+Next)
+- id label for image as well as user id
+- convert utility
+        - image magik -> magik convert
+        - convert to a raw ppm
+        -display image in another page as well as url to image
 2) backend php that will perform cropping with watermarking
 3) Maybe another window pops up with url link and cropping (allow people with permission to use url)
+
+
+
 

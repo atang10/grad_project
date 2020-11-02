@@ -14,7 +14,9 @@
     </canvas>
     <br><br>
     <button id= "share">Share</button>
-    <p id = "coordinates" name = "data"></p>
+    <p id = "coordinates"></p>
+    <br><br>
+    <p id = "cropped_url"></p>
 </body>
 <script type = "text/javascript">
     var x_1 = 0;
@@ -60,28 +62,26 @@
         }
     }
     function crop(event){
-        document.getElementById('coordinates').innerHTML = "X1: " + x_1 + " Y1: " + y_1 +" X2: " + x_2 + " Y2: " + y_2 ;
-        var url = 'crop.php' + '?X1=' + x_1 +"&Y1=" + y_1 +"&X2=" + x_2 + "&Y2=" + y_2 ;
-        console.log(url);
-        /*
+        //document.getElementById('coordinates').innerHTML = "X1: " + x_1 + " Y1: " + y_1 +" X2: " + x_2 + " Y2: " + y_2 ;
+        var url = 'cropping_pic.php' + '?serid=user1&idlabel=id1' + '&X1=' + x_1 +"&Y1=" + y_1 +"&X2=" + x_2 + "&Y2=" + y_2 ;
+        document.getElementById('coordinates').innerHTML = url;
         var server_crop = new XMLHttpRequest();
-        server_crop.open('GET','crop.php',true);
+        server_crop.open('GET',url,true);
         server_crop.onload = function() {
-                //this = xhr_comic
                 if(this.status == 200){
                     //console.log(this.responseText);
                     
-                    document.getElementById('coordinates').innerHTML = 'From php: ' + this.responseText;;
+                    document.getElementById('cropped_url').innerHTML = 'From php: ' + this.responseText;;
                     //new_window = window.open("reader.html","Reader","fullscreen = 1");
                 }
                 else if(this.status == 404){
-                    document.getElementById('coordinates').innerHTML = 'Couldn\'t crop photo';
+                    document.getElementById('cropped_url').innerHTML = 'Couldn\'t crop photo';
                 }
             }
         server_crop.onerror = function(){
             console.log('Request Error ---');
         }
-        server_crop.send();*/
+        server_crop.send();
     }
 </script>
 </html>

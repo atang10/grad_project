@@ -1,4 +1,6 @@
 <?php
-$value = $_GET['data'];
-echo $result;
+$value = $_GET["X1"];
+$value = $_GET["X2"];
+echo "HI";
+echo $value;
 ?>
