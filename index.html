@@ -45,15 +45,15 @@
             xhr_comic.send();
         }
         function displayComic(){
-            
-            c = new_window.document.getElementById('picture');
-            ctx = c.getContext("2d");
-            c.width = "600";
-            c.height = "500";
             img = new Image();
             img.src = comic_pic;
-            img.width = "600";
-            img.height = "500";
+            //img.width = "600";
+            //img.height = "500";
+            c = new_window.document.getElementById('picture');
+            ctx = c.getContext("2d");
+            c.width = img.width;
+            c.height = img.height;
+            
             img.onload = function(e){
                 ctx.drawImage(img,0,0,img.width,img.height);
             }

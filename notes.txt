@@ -22,10 +22,13 @@ Next)
 - id label for image as well as user id
 - convert utility
         - image magik -> magik convert
+        convert -crop 
         - convert to a raw ppm
         -display image in another page as well as url to image
 2) backend php that will perform cropping with watermarking
 3) Maybe another window pops up with url link and cropping (allow people with permission to use url)
+
+convert comic3.jpg -crop 57x48+0+0 crop_comic3.jpg
 
 
 

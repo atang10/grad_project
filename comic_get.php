@@ -1,6 +1,6 @@
 <?php
     $dh = "comics"; // all comic pictures in the comic directory
-    $comic = "comic_1.jpg";
+    $comic = "comic3.jpg";
     //Checks whole directory for comic picture wanted
     if(is_dir($dh)){
         $search_dir = opendir($dh);
